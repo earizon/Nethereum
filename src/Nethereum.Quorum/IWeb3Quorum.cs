@@ -4,7 +4,7 @@ using Nethereum.Web3;
 
 namespace Nethereum.Quorum
 {
-    public interface IWeb3Quorum: IWeb3
+    public interface IWeb3Quorum
     {
         List<string> PrivateFor { get; }
         string PrivateFrom { get; }
