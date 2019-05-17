@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Nethereum.JsonRpc.Client;
-using Nethereum.Quorum.RPC.DTOs;
 using Nethereum.RPC.Eth.DTOs;
 using Newtonsoft.Json.Linq;
 
@@ -26,7 +25,7 @@ namespace Nethereum.Quorum.RPC.Interceptors
             if (request.Method == "eth_sendTransaction")
             {
                 var transaction = (TransactionInput) request.RawParameters[0];
-                var privateTransaction = new PrivateTransactionInput(transaction, privateFor.ToArray(), privateFrom);
+                var privateTransaction = new Web3.RPC.DTOs.QuorumPrivateTransactionInput(transaction, privateFor.ToArray(), privateFrom);
                 return await interceptedSendRequestAsync(new RpcRequest(request.Id, request.Method, privateTransaction), route).ConfigureAwait(false);
             }
             return await interceptedSendRequestAsync(request, route).ConfigureAwait(false);
@@ -39,7 +38,7 @@ namespace Nethereum.Quorum.RPC.Interceptors
             if (method == "eth_sendTransaction")
             {
                 var transaction = (TransactionInput) paramList[0];
-                var privateTransaction = new PrivateTransactionInput(transaction, privateFor.ToArray(), privateFrom);
+                var privateTransaction = new QuorumPrivateTransactionInput(transaction, privateFor.ToArray(), privateFrom);
                 paramList[0] = privateTransaction;
                 return await interceptedSendRequestAsync(method, route, paramList).ConfigureAwait(false);
             }

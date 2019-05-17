@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Nethereum.JsonRpc.Client;
+﻿using Nethereum.JsonRpc.Client;
 using Nethereum.RPC;
-using Nethereum.RPC.Eth.Filters;
-using Nethereum.Web3;
-
+using Nethereum.Web3.RPC;
+using Nethereum.Web3.RPC.Services;
 namespace Nethereum.Quorum.RPC.Services
 {
     public class QuorumChainService : RpcClientWrapper, IQuorumChainService

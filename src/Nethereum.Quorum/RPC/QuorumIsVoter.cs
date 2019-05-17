@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Nethereum.Hex.HexConvertors.Extensions;
 using Nethereum.JsonRpc.Client;
+using Nethereum.Web3.RPC;
 
 namespace Nethereum.Quorum.RPC
 {

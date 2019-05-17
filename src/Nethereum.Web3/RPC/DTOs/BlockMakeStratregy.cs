@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Nethereum.Quorum.RPC.DTOs
+namespace Nethereum.Web3.RPC.DTOs
 {
-    public class BlockMakeStratregy
+    public class QuorumBlockMakeStratregy
 
     {
         [JsonProperty(PropertyName = "maxblocktime")]

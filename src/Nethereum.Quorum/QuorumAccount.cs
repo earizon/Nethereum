@@ -1,6 +1,6 @@
-﻿using Nethereum.RPC.Accounts;
-using Nethereum.RPC.NonceServices;
+﻿using Nethereum.RPC.NonceServices;
 using Nethereum.RPC.TransactionManagers;
+using Nethereum.Web3.RPC.Accounts;
 
 namespace Nethereum.Quorum
 {

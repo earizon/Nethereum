@@ -1,8 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Newtonsoft.Json;
 
-namespace Nethereum.Quorum.RPC.DTOs
+namespace Nethereum.Web3.RPC.DTOs
 {
-    public class NodeInfo
+    public class QuorumNodeInfo
     {
         [JsonProperty(PropertyName = "blockMakerAccount")]
         public string BlockMakerAccount { get; set; }
@@ -11,7 +14,7 @@ namespace Nethereum.Quorum.RPC.DTOs
         public string VoteAccount { get; set; }
 
         [JsonProperty(PropertyName = "blockmakestrategy")]
-        public BlockMakeStratregy BlockMakeStratregy { get; set; }
+        public QuorumBlockMakeStratregy BlockMakeStratregy { get; set; }
 
         [JsonProperty(PropertyName = "canCreateBlocks")]
         public bool CanCreateBlocks { get; set; }

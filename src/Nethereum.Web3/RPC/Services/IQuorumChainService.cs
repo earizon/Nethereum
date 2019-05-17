@@ -1,4 +1,6 @@
-﻿namespace Nethereum.Quorum.RPC.Services
+﻿using Nethereum.Web3;
+
+namespace Nethereum.Web3.RPC.Services
 {
     public interface IQuorumChainService
     {

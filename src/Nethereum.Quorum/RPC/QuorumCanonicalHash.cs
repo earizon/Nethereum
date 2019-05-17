@@ -5,7 +5,7 @@ using Nethereum.JsonRpc.Client;
 
 namespace Nethereum.Quorum.RPC
 {
-    public class QuorumCanonicalHash : RpcRequestResponseHandler<string>, IQuorumCanonicalHash
+    public class QuorumCanonicalHash : RpcRequestResponseHandler<string>, Web3.RPC.IQuorumCanonicalHash
     {
         public QuorumCanonicalHash(IClient client) : base(client, ApiMethods.quorum_canonicalHash.ToString())
         {

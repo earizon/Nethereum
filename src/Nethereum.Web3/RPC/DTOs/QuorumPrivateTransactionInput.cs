@@ -1,15 +1,15 @@
 ﻿using Nethereum.RPC.Eth.DTOs;
 using Newtonsoft.Json;
 
-namespace Nethereum.Quorum.RPC.DTOs
+namespace Nethereum.Web3.RPC.DTOs
 {
-    public class PrivateTransactionInput : TransactionInput
+    public class QuorumPrivateTransactionInput : TransactionInput
     {
-        public PrivateTransactionInput()
+        public QuorumPrivateTransactionInput()
         {
         }
 
-        public PrivateTransactionInput(TransactionInput transaction, string[] privateFor, string privateFrom)
+        public QuorumPrivateTransactionInput(TransactionInput transaction, string[] privateFor, string privateFrom)
         {
             PrivateFrom = privateFrom;
             PrivateFor = privateFor;

@@ -1,5 +1,6 @@
 ﻿using Nethereum.JsonRpc.Client;
 using Nethereum.RPC.Infrastructure;
+using Nethereum.Web3.RPC;
 
 namespace Nethereum.Quorum.RPC
 {
@@ -10,8 +11,4 @@ namespace Nethereum.Quorum.RPC
         }
     }
 
-    public interface IQuorumPauseBlockMaker : IGenericRpcRequestResponseHandlerNoParam<object>
-    {
-
-    }
 }
